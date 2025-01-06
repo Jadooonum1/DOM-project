@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Crypto Portfolio Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Crypto Portfolio Tracker</h1>
+
+    <!-- Dropdown for selecting cryptocurrency -->
+    <label for="crypto-select">Select Cryptocurrency:</label>
+    <select id="crypto-select">
+        <option value="" disabled selected>Select a cryptocurrency</option>
+    </select>
+
+    <!-- Container for displaying chart -->
+    <div>
+        <canvas id="crypto-chart" width="600" height="400"></canvas>
+    </div>
+
+    <!-- Container for displaying predicted price -->
+    <div id="prediction-container"></div>
+
+    <!-- Pagination Controls -->
+    <div id="pagination"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
